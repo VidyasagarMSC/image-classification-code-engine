@@ -9,8 +9,9 @@
   "author": "Vidyasagar Machupalli",
   "license": "ISC",
   "dependencies": {
+    "@tensorflow-models/mobilenet": "^2.0.4",
+    "@tensorflow/tfjs-node": "^2.7.0",
     "dotenv": "^8.2.0",
-    "ibm-cos-sdk": "^1.6.0",
-    "ibm-watson": "^5.4.0"
+    "ibm-cos-sdk": "^1.6.0"
   }
 }

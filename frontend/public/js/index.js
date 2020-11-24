@@ -154,12 +154,7 @@ function readResults(){
         //console.log(value);
         //console.log(Object.keys(data).length);
         if (Object.keys(data).length !== 0 && data.hasOwnProperty(value)) {
-        var result = data[value].images[0].classifiers[0].classes.sort(
-          function (a, b) {
-            return b.score - a.score;
-          }
-        );
-        //console.log(result);
+        var result = data[value];
         let parent = $(this).parent(".card-footer");
         if (result.length > 1) {
              parent.append('<a class="card-footer-item table-toggle is-pulled-right">show results<span class="icon"><i class="fas fa-angle-down" aria-hidden="true"></i></span></a><br>')
@@ -171,9 +166,9 @@ function readResults(){
               .children("tbody")
               .append(
                 "<tr><td>" +
-                  result[i].class +
+                  result[i].className +
                   "</td><td>" +
-                  result[i].score +
+                  (result[i].probability).toFixed(4) +
                   "</td></tr>"
               );
           }
