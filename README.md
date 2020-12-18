@@ -1,17 +1,19 @@
-# Image Classification with Code Engine
+# Image Classification with Code Engine and TensorFlow
 
-> Companion code sample to the [Code Engine solution tutorial](https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-image_classification_code_engine)
+## Build the container images
 
-Following the steps in the [solution tutorial](https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-image_classification_code_engine) and using this code sample, you will learn about [IBM Cloud™ Code Engine](https://cloud.ibm.com/codeengine/overview) by deploying an image classification application.
+Run the below command to build and push three container images - frontend, backend and backend-job respectively.
+   ```
+   ./deploy.sh <DOCKER_ACCOUNT_NAME>
+   ```
 
-You will create a Code Engine project, select the project and deploy Code Engine components - applications and jobs to the project. You will learn how to bind IBM Cloud services (Cloud Object Storage and Visual Recognition) to your Code Engine components. You will also understand the auto-scaling capability of Code Engine where instances are scaled up or down (to zero) based on incoming workload.
+## Use the container images with the solution tutorial
+Once you the container images, follow the steps in the [solution tutorial](https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-text-analysis-code-engine) and use this code sample to learn about [IBM Cloud™ Code Engine](https://cloud.ibm.com/codeengine/overview) by deploying an image classification application.
 
-IBM Cloud™ Code Engine is a fully managed, serverless platform that runs your containerized workloads, including web apps, micro-services, event-driven functions, or batch jobs. Code Engine even builds container images for you from your source code. Because these workloads are all hosted within the same Kubernetes infrastructure, all of them can seamlessly work together. The Code Engine experience is designed so that you can focus on writing code and not on the infrastructure that is needed to host it.
+> - Use the container images built from this code sample. Replace `ibmcom/*` with `<ACCOUNT_NAME>/*` container images.
+> - Instead of uploading a text file, upload an image (.jpeg, .png) to COS. For sample images, **check the images folder in this repo.**
 
-## Architecture
+### Expected output
 
-![](images/architecture_diagram.png)
+![](images/output.png)
 
-## License
-
-Check the [License](License)
