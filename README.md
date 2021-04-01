@@ -1,4 +1,5 @@
 # Image Classification with Code Engine and TensorFlow
+> 🔆 The code in this GitHub repo is an extension to the Solution tutorial mentioned below. You can follow the steps in the solution tutorial but instead of uploading a text file, upload an image (.jpeg, .png) to COS and you don't have to provision NLU service. 
 
 ## Build the container images
 
@@ -26,7 +27,7 @@ Follow the steps in the [solution tutorial](https://cloud.ibm.com/docs/solution-
 
 **Note:**
 - Use the container images built from this code sample. Replace `ibmcom/*` with `<ACCOUNT_NAME>/*`
-- Instead of uploading a text file, upload an image (.jpeg, .png) to COS. For sample images, **check the images folder in this repo.**
+- 🔆 Instead of uploading a text file, upload an image (.jpeg, .png) to COS. For sample images, **check the images folder in this repo.**
 
 ### Expected output
 
